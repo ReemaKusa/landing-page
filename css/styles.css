@@ -216,3 +216,78 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Ensure the header and menu are stacked vertically */
+    .page__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+
+    /* Adjust the navigation menu for smaller screens */
+    .navbar__menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    /* Make menu links more user-friendly on small screens */
+    .menu__link {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        color: #000;
+        background: #f9f9f9;
+    }
+
+    .menu__link:hover {
+        background: #333;
+        color: #fff;
+    }
+
+    /* Adjust section padding for smaller screens */
+    section {
+        min-height: auto; /* Remove fixed height */
+        padding: 2em 1em;
+    }
+
+    .landing__container {
+        padding: 1em;
+        text-align: center; /* Center-align text for better readability */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce size for headings */
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em; /* Adjust text size */
+        line-height: 1.4em;
+    }
+}
+
+/* For very small screens (mobile phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar__menu {
+        gap: 0.5em;
+    }
+
+    .menu__link {
+        padding: 0.8em;
+        font-size: 0.9em;
+    }
+}
